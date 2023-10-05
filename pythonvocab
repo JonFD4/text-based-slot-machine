@@ -1,0 +1,2 @@
+isdigit(): it checks if all the characters are digits. it returns true.
+    Exponents are considered digits
