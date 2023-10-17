@@ -7,6 +7,25 @@ MAX_BET = 100
 ROWS= 3
 COLS = 3
 
+'''Making a dictionary to represent symbols'''
+symbol_count ={
+"A": 2,
+"B": 4,
+"C": 6,
+"D": 8,
+
+}
+def get_slot_machine_spin(rows, cols, symbols):
+    '''Generate what symbols are going to be in each column based on the frequency of symbols available.
+    We need to randomly pick the number of rows inside each column;
+    so if we have three rows, we need to pick three symbols that go into the each column. For each column, there has to be a random pick
+    Create a list that contains all the possible values and to randomly choose three of those values. the chosen values are removed from the list.
+    '''
+
+    all_symbols =[]
+    for symbol, symbol_count in symbols.items(): 
+        for _ in range(symbol_count): # underscore is used to represent an anonymous variable because we don't care about the iteration/ count value
+            all_symbols.append(symbol)
 
 
 def deposit():
